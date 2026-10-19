@@ -1122,6 +1122,263 @@ Obiekt znajduje się w budowie\.
 
 Obiekt został zniszczony\.
 
+<a name='DiGi.BDOT10k.Enums.OT_KatZarzadzaniaDrogi'></a>
+
+## OT\_KatZarzadzaniaDrogi Enum
+
+Management category of a road in the BDOT10k standard \(code list `OT_KatZarzadzaniaDrogi`\)\.
+
+The [System\.ComponentModel\.DescriptionAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.descriptionattribute 'System\.ComponentModel\.DescriptionAttribute') holds the exact value written in BDOT10k GML files.
+
+```csharp
+public enum OT_KatZarzadzaniaDrogi
+```
+### Fields
+
+<a name='DiGi.BDOT10k.Enums.OT_KatZarzadzaniaDrogi.krajowa'></a>
+
+`krajowa` 0
+
+National road\.
+
+<a name='DiGi.BDOT10k.Enums.OT_KatZarzadzaniaDrogi.wojewodzka'></a>
+
+`wojewodzka` 1
+
+Voivodeship road\.
+
+<a name='DiGi.BDOT10k.Enums.OT_KatZarzadzaniaDrogi.powiatowa'></a>
+
+`powiatowa` 2
+
+County road\.
+
+<a name='DiGi.BDOT10k.Enums.OT_KatZarzadzaniaDrogi.gminna'></a>
+
+`gminna` 3
+
+Municipal road\.
+
+<a name='DiGi.BDOT10k.Enums.OT_KatZarzadzaniaDrogi.wewnetrzna'></a>
+
+`wewnetrzna` 4
+
+Internal road, outside the public road categories\.
+
+<a name='DiGi.BDOT10k.Enums.OT_KlasaDrogi'></a>
+
+## OT\_KlasaDrogi Enum
+
+Technical class of a road in the BDOT10k standard \(code list `OT_KlasaDrogi`\)\.
+
+The [System\.ComponentModel\.DescriptionAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.descriptionattribute 'System\.ComponentModel\.DescriptionAttribute') holds the exact value written in BDOT10k GML files, which spells the GP class "przyśpieszonego".
+
+```csharp
+public enum OT_KlasaDrogi
+```
+### Fields
+
+<a name='DiGi.BDOT10k.Enums.OT_KlasaDrogi.autostrada'></a>
+
+`autostrada` 0
+
+Motorway \(class A\)\.
+
+<a name='DiGi.BDOT10k.Enums.OT_KlasaDrogi.droga_ekspresowa'></a>
+
+`droga_ekspresowa` 1
+
+Expressway \(class S\)\.
+
+<a name='DiGi.BDOT10k.Enums.OT_KlasaDrogi.droga_glowna_ruchu_przyspieszonego'></a>
+
+`droga_glowna_ruchu_przyspieszonego` 2
+
+Main road with accelerated traffic \(class GP\)\.
+
+<a name='DiGi.BDOT10k.Enums.OT_KlasaDrogi.droga_glowna'></a>
+
+`droga_glowna` 3
+
+Main road \(class G\)\.
+
+<a name='DiGi.BDOT10k.Enums.OT_KlasaDrogi.droga_zbiorcza'></a>
+
+`droga_zbiorcza` 4
+
+Collector road \(class Z\)\.
+
+<a name='DiGi.BDOT10k.Enums.OT_KlasaDrogi.droga_lokalna'></a>
+
+`droga_lokalna` 5
+
+Local road \(class L\)\.
+
+<a name='DiGi.BDOT10k.Enums.OT_KlasaDrogi.droga_dojazdowa'></a>
+
+`droga_dojazdowa` 6
+
+Access road \(class D\)\.
+
+<a name='DiGi.BDOT10k.Enums.OT_KlasaDrogi.droga_wewnetrzna'></a>
+
+`droga_wewnetrzna` 7
+
+Internal road \(class I\)\.
+
+<a name='DiGi.BDOT10k.Enums.OT_MaterialNawierzchni'></a>
+
+## OT\_MaterialNawierzchni Enum
+
+Surface material of a road, carriageway or path in the BDOT10k standard \(code list `OT_MaterialNawierzchni`\)\.
+
+The [System\.ComponentModel\.DescriptionAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.descriptionattribute 'System\.ComponentModel\.DescriptionAttribute') holds the exact value written in BDOT10k GML files.
+
+```csharp
+public enum OT_MaterialNawierzchni
+```
+### Fields
+
+<a name='DiGi.BDOT10k.Enums.OT_MaterialNawierzchni.beton'></a>
+
+`beton` 0
+
+Concrete\.
+
+<a name='DiGi.BDOT10k.Enums.OT_MaterialNawierzchni.bruk'></a>
+
+`bruk` 1
+
+Cobblestone\.
+
+<a name='DiGi.BDOT10k.Enums.OT_MaterialNawierzchni.grunt_naturalny'></a>
+
+`grunt_naturalny` 2
+
+Natural ground \(unpaved\)\.
+
+<a name='DiGi.BDOT10k.Enums.OT_MaterialNawierzchni.kostka_kamienna'></a>
+
+`kostka_kamienna` 3
+
+Stone setts\.
+
+<a name='DiGi.BDOT10k.Enums.OT_MaterialNawierzchni.kostka_prefabrykowana'></a>
+
+`kostka_prefabrykowana` 4
+
+Precast paving blocks\.
+
+<a name='DiGi.BDOT10k.Enums.OT_MaterialNawierzchni.masa_bitumiczna'></a>
+
+`masa_bitumiczna` 5
+
+Bituminous mix \(asphalt\)\.
+
+<a name='DiGi.BDOT10k.Enums.OT_MaterialNawierzchni.plyty_betonowe'></a>
+
+`plyty_betonowe` 6
+
+Concrete slabs\.
+
+<a name='DiGi.BDOT10k.Enums.OT_MaterialNawierzchni.zwir'></a>
+
+`zwir` 7
+
+Gravel\.
+
+<a name='DiGi.BDOT10k.Enums.OT_MaterialNawierzchni.tluczen'></a>
+
+`tluczen` 8
+
+Crushed stone\.
+
+<a name='DiGi.BDOT10k.Enums.OT_MaterialNawierzchni.inny'></a>
+
+`inny` 9
+
+Other material\.
+
+<a name='DiGi.BDOT10k.Enums.OT_PolozenieObiektuSieciTransportowej'></a>
+
+## OT\_PolozenieObiektuSieciTransportowej Enum
+
+Position of a transport network object relative to the ground surface in the BDOT10k standard \(code list `OT_PolozenieObiektuSieciTransportowej`\)\.
+
+The [System\.ComponentModel\.DescriptionAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.descriptionattribute 'System\.ComponentModel\.DescriptionAttribute') holds the exact value written in BDOT10k GML files. Levels 1 to 4 apply to bridges, viaducts and flyovers, 4 being the highest.
+
+```csharp
+public enum OT_PolozenieObiektuSieciTransportowej
+```
+### Fields
+
+<a name='DiGi.BDOT10k.Enums.OT_PolozenieObiektuSieciTransportowej.pod_powierzchnia_gruntu'></a>
+
+`pod_powierzchnia_gruntu` 0
+
+Below the ground surface \(tunnel\)\.
+
+<a name='DiGi.BDOT10k.Enums.OT_PolozenieObiektuSieciTransportowej.na_powierzchni_gruntu'></a>
+
+`na_powierzchni_gruntu` 1
+
+On the ground surface\.
+
+<a name='DiGi.BDOT10k.Enums.OT_PolozenieObiektuSieciTransportowej.ponad_powierzchnia_gruntu_poziom_1'></a>
+
+`ponad_powierzchnia_gruntu_poziom_1` 2
+
+Above the ground surface, level 1\.
+
+<a name='DiGi.BDOT10k.Enums.OT_PolozenieObiektuSieciTransportowej.ponad_powierzchnia_gruntu_poziom_2'></a>
+
+`ponad_powierzchnia_gruntu_poziom_2` 3
+
+Above the ground surface, level 2\.
+
+<a name='DiGi.BDOT10k.Enums.OT_PolozenieObiektuSieciTransportowej.ponad_powierzchnia_gruntu_poziom_3'></a>
+
+`ponad_powierzchnia_gruntu_poziom_3` 4
+
+Above the ground surface, level 3\.
+
+<a name='DiGi.BDOT10k.Enums.OT_PolozenieObiektuSieciTransportowej.ponad_powierzchnia_gruntu_poziom_4'></a>
+
+`ponad_powierzchnia_gruntu_poziom_4` 5
+
+Above the ground surface, level 4\.
+
+<a name='DiGi.BDOT10k.Enums.OT_RodzajCiaguRuchuPieszego'></a>
+
+## OT\_RodzajCiaguRuchuPieszego Enum
+
+Kind of pedestrian or cycle route in the BDOT10k standard \(code list `OT_RodzajCiaguRuchuPieszego`\)\.
+
+The [System\.ComponentModel\.DescriptionAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.descriptionattribute 'System\.ComponentModel\.DescriptionAttribute') holds the exact value written in BDOT10k GML files. These follow Annex 3, Table 8 of Dz.U. 2021 poz. 1412, not the UML diagram in Annex 2, which lists different names.
+
+```csharp
+public enum OT_RodzajCiaguRuchuPieszego
+```
+### Fields
+
+<a name='DiGi.BDOT10k.Enums.OT_RodzajCiaguRuchuPieszego.aleja_lub_pasaz'></a>
+
+`aleja_lub_pasaz` 0
+
+Alley or promenade\.
+
+<a name='DiGi.BDOT10k.Enums.OT_RodzajCiaguRuchuPieszego.sciezka'></a>
+
+`sciezka` 1
+
+Footpath\.
+
+<a name='DiGi.BDOT10k.Enums.OT_RodzajCiaguRuchuPieszego.droga_dla_rowerow'></a>
+
+`droga_dla_rowerow` 2
+
+Cycle path\.
+
 <a name='DiGi.BDOT10k.Enums.OT_RodzajJednostkiAdministracyjnej'></a>
 
 ## OT\_RodzajJednostkiAdministracyjnej Enum
@@ -1251,6 +1508,31 @@ Osada leśna\.
 `inny_obiekt` 11
 
 Inny obiekt\.
+
+<a name='DiGi.BDOT10k.Enums.OT_RodzajRepGeom'></a>
+
+## OT\_RodzajRepGeom Enum
+
+Kind of geometric representation of a linear object in the BDOT10k standard \(code list `OT_RodzajRepGeom`\)\.
+
+The [System\.ComponentModel\.DescriptionAttribute](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.descriptionattribute 'System\.ComponentModel\.DescriptionAttribute') holds the exact value written in BDOT10k GML files.
+
+```csharp
+public enum OT_RodzajRepGeom
+```
+### Fields
+
+<a name='DiGi.BDOT10k.Enums.OT_RodzajRepGeom.linia_umowna'></a>
+
+`linia_umowna` 0
+
+Notional line, e\.g\. a carriageway crossing a square\.
+
+<a name='DiGi.BDOT10k.Enums.OT_RodzajRepGeom.sztuczny_lacznik'></a>
+
+`sztuczny_lacznik` 1
+
+Artificial connector that keeps the network continuous\.
 
 <a name='DiGi.BDOT10k.Enums.OT_ZrodloDanych'></a>
 

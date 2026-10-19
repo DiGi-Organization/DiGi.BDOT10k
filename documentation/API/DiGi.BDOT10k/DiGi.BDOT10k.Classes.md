@@ -360,6 +360,157 @@ Inicjalizuje nową instancję klasy [OT\_BudynkiBudowleIUrzadzenia](DiGi.BDOT10k
 public OT_BudynkiBudowleIUrzadzenia();
 ```
 
+<a name='DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi'></a>
+
+## OT\_CharakterystykaDrogi Class
+
+Abstract base of the BDOT10k road classes [OT\_SKJZ\_L](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_SKJZ_L 'DiGi\.BDOT10k\.Classes\.OT\_SKJZ\_L') \(carriageway\) and [OT\_SKDR\_L](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_SKDR_L 'DiGi\.BDOT10k\.Classes\.OT\_SKDR\_L') \(road\), holding the attributes they share\.
+
+Mirrors the abstract UML class `OT_CharakterystykaDrogi` of Annex 2 to Dz.U. 2021 poz. 1412, which derives directly from `OT_ObiektTopograficzny`. Property names are the GML element names, because the GML parser binds elements to properties by name.
+
+```csharp
+public abstract class OT_CharakterystykaDrogi : DiGi.BDOT10k.Classes.OT_ObiektTopograficzny, DiGi.BDOT10k.Interfaces.IOT_LiniowyObiektGeometryczny, DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny<DiGi.GML.Classes.AbstractCurve>, DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny, DiGi.GML.Interfaces.IAbstractGML, DiGi.GML.Interfaces.IFeatureMember
+```
+
+Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System\.Object') → [DiGi\.GML\.Classes\.AbstractGML](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.abstractgml 'DiGi\.GML\.Classes\.AbstractGML') → [DiGi\.GML\.Classes\.GML](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.gml 'DiGi\.GML\.Classes\.GML') → [OT\_ObiektTopograficzny](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_ObiektTopograficzny 'DiGi\.BDOT10k\.Classes\.OT\_ObiektTopograficzny') → OT\_CharakterystykaDrogi
+
+Derived  
+↳ [OT\_SKDR\_L](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_SKDR_L 'DiGi\.BDOT10k\.Classes\.OT\_SKDR\_L')  
+↳ [OT\_SKJZ\_L](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_SKJZ_L 'DiGi\.BDOT10k\.Classes\.OT\_SKJZ\_L')
+
+Implements [IOT\_LiniowyObiektGeometryczny](DiGi.BDOT10k.Interfaces.md#DiGi.BDOT10k.Interfaces.IOT_LiniowyObiektGeometryczny 'DiGi\.BDOT10k\.Interfaces\.IOT\_LiniowyObiektGeometryczny'), [DiGi\.BDOT10k\.Interfaces\.IOT\_ObiektGeometryczny&lt;](DiGi.BDOT10k.Interfaces.md#DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny_T_ 'DiGi\.BDOT10k\.Interfaces\.IOT\_ObiektGeometryczny\<T\>')[DiGi\.GML\.Classes\.AbstractCurve](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.abstractcurve 'DiGi\.GML\.Classes\.AbstractCurve')[&gt;](DiGi.BDOT10k.Interfaces.md#DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny_T_ 'DiGi\.BDOT10k\.Interfaces\.IOT\_ObiektGeometryczny\<T\>'), [IOT\_ObiektGeometryczny](DiGi.BDOT10k.Interfaces.md#DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny 'DiGi\.BDOT10k\.Interfaces\.IOT\_ObiektGeometryczny'), [DiGi\.GML\.Interfaces\.IAbstractGML](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.interfaces.iabstractgml 'DiGi\.GML\.Interfaces\.IAbstractGML'), [DiGi\.GML\.Interfaces\.IFeatureMember](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.interfaces.ifeaturemember 'DiGi\.GML\.Interfaces\.IFeatureMember')
+### Constructors
+
+<a name='DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi.OT_CharakterystykaDrogi()'></a>
+
+## OT\_CharakterystykaDrogi\(\) Constructor
+
+Initializes a new instance of the [OT\_CharakterystykaDrogi](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi 'DiGi\.BDOT10k\.Classes\.OT\_CharakterystykaDrogi') class\.
+
+```csharp
+public OT_CharakterystykaDrogi();
+```
+### Properties
+
+<a name='DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi.geometria'></a>
+
+## OT\_CharakterystykaDrogi\.geometria Property
+
+Gets or sets the linear geometry of the object\.
+
+```csharp
+public DiGi.GML.Classes.AbstractCurve geometria { get; set; }
+```
+
+Implements [geometria](DiGi.BDOT10k.Interfaces.md#DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny_T_.geometria 'DiGi\.BDOT10k\.Interfaces\.IOT\_ObiektGeometryczny\<T\>\.geometria')
+
+#### Property Value
+[DiGi\.GML\.Classes\.AbstractCurve](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.abstractcurve 'DiGi\.GML\.Classes\.AbstractCurve')
+
+<a name='DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi.kategoriaZarzadzania'></a>
+
+## OT\_CharakterystykaDrogi\.kategoriaZarzadzania Property
+
+Gets or sets the management category of the road\.
+
+```csharp
+public System.Nullable<DiGi.BDOT10k.Enums.OT_KatZarzadzaniaDrogi> kategoriaZarzadzania { get; set; }
+```
+
+#### Property Value
+[System\.Nullable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')[OT\_KatZarzadzaniaDrogi](DiGi.BDOT10k.Enums.md#DiGi.BDOT10k.Enums.OT_KatZarzadzaniaDrogi 'DiGi\.BDOT10k\.Enums\.OT\_KatZarzadzaniaDrogi')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')
+
+<a name='DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi.klasaDrogi'></a>
+
+## OT\_CharakterystykaDrogi\.klasaDrogi Property
+
+Gets or sets the technical class of the road\.
+
+```csharp
+public System.Nullable<DiGi.BDOT10k.Enums.OT_KlasaDrogi> klasaDrogi { get; set; }
+```
+
+#### Property Value
+[System\.Nullable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')[OT\_KlasaDrogi](DiGi.BDOT10k.Enums.md#DiGi.BDOT10k.Enums.OT_KlasaDrogi 'DiGi\.BDOT10k\.Enums\.OT\_KlasaDrogi')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')
+
+<a name='DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi.liczbaJezdniDrogi'></a>
+
+## OT\_CharakterystykaDrogi\.liczbaJezdniDrogi Property
+
+Gets or sets the number of carriageways of the road\.
+
+```csharp
+public System.Nullable<int> liczbaJezdniDrogi { get; set; }
+```
+
+#### Property Value
+[System\.Nullable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')[System\.Int32](https://learn.microsoft.com/en-us/dotnet/api/system.int32 'System\.Int32')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')
+
+<a name='DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi.materialNawierzchni'></a>
+
+## OT\_CharakterystykaDrogi\.materialNawierzchni Property
+
+Gets or sets the surface material\.
+
+```csharp
+public System.Nullable<DiGi.BDOT10k.Enums.OT_MaterialNawierzchni> materialNawierzchni { get; set; }
+```
+
+#### Property Value
+[System\.Nullable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')[OT\_MaterialNawierzchni](DiGi.BDOT10k.Enums.md#DiGi.BDOT10k.Enums.OT_MaterialNawierzchni 'DiGi\.BDOT10k\.Enums\.OT\_MaterialNawierzchni')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')
+
+<a name='DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi.nazwaDrogi'></a>
+
+## OT\_CharakterystykaDrogi\.nazwaDrogi Property
+
+Gets or sets the proper name of the road, which is not a street name\.
+
+```csharp
+public string? nazwaDrogi { get; set; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi.numerDrogi'></a>
+
+## OT\_CharakterystykaDrogi\.numerDrogi Property
+
+Gets or sets the road numbers\. A road segment can carry several, e\.g\. a European and a national number\.
+
+```csharp
+public System.Collections.Generic.List<string>? numerDrogi { get; set; }
+```
+
+#### Property Value
+[System\.Collections\.Generic\.List&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1 'System\.Collections\.Generic\.List\`1')[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1 'System\.Collections\.Generic\.List\`1')
+
+<a name='DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi.polozenie'></a>
+
+## OT\_CharakterystykaDrogi\.polozenie Property
+
+Gets or sets the position of the road relative to the ground surface\.
+
+```csharp
+public System.Nullable<DiGi.BDOT10k.Enums.OT_PolozenieObiektuSieciTransportowej> polozenie { get; set; }
+```
+
+#### Property Value
+[System\.Nullable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')[OT\_PolozenieObiektuSieciTransportowej](DiGi.BDOT10k.Enums.md#DiGi.BDOT10k.Enums.OT_PolozenieObiektuSieciTransportowej 'DiGi\.BDOT10k\.Enums\.OT\_PolozenieObiektuSieciTransportowej')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')
+
+<a name='DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi.szerokoscNawierzchni'></a>
+
+## OT\_CharakterystykaDrogi\.szerokoscNawierzchni Property
+
+Gets or sets the surface width in metres\.
+
+```csharp
+public System.Nullable<double> szerokoscNawierzchni { get; set; }
+```
+
+#### Property Value
+[System\.Nullable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')
+
 <a name='DiGi.BDOT10k.Classes.OT_ObiektTopograficzny'></a>
 
 ## OT\_ObiektTopograficzny Class
@@ -374,7 +525,9 @@ Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system
 
 Derived  
 ↳ [OT\_BudynkiBudowleIUrzadzenia](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_BudynkiBudowleIUrzadzenia 'DiGi\.BDOT10k\.Classes\.OT\_BudynkiBudowleIUrzadzenia')  
-↳ [OT\_PodzialTerytorialny](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_PodzialTerytorialny 'DiGi\.BDOT10k\.Classes\.OT\_PodzialTerytorialny')
+↳ [OT\_CharakterystykaDrogi](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi 'DiGi\.BDOT10k\.Classes\.OT\_CharakterystykaDrogi')  
+↳ [OT\_PodzialTerytorialny](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_PodzialTerytorialny 'DiGi\.BDOT10k\.Classes\.OT\_PodzialTerytorialny')  
+↳ [OT\_SKRP\_L](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_SKRP_L 'DiGi\.BDOT10k\.Classes\.OT\_SKRP\_L')
 ### Constructors
 
 <a name='DiGi.BDOT10k.Classes.OT_ObiektTopograficzny.OT_ObiektTopograficzny()'></a>
@@ -593,6 +746,310 @@ Pobiera lub ustawia nazwę jednostki podziału terytorialnego\.
 
 ```csharp
 public string nazwa { get; set; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKDR_L'></a>
+
+## OT\_SKDR\_L Class
+
+Road \(`droga`\) of the BDOT10k standard: the axis of a single\- or dual\-carriageway road segment\.
+
+It declares no attributes of its own. Its attributes are those of [OT\_CharakterystykaDrogi](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi 'DiGi\.BDOT10k\.Classes\.OT\_CharakterystykaDrogi') (Annex 3, §2 to Dz.U. 2021 poz. 1412).
+
+```csharp
+public class OT_SKDR_L : DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi
+```
+
+Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System\.Object') → [DiGi\.GML\.Classes\.AbstractGML](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.abstractgml 'DiGi\.GML\.Classes\.AbstractGML') → [DiGi\.GML\.Classes\.GML](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.gml 'DiGi\.GML\.Classes\.GML') → [OT\_ObiektTopograficzny](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_ObiektTopograficzny 'DiGi\.BDOT10k\.Classes\.OT\_ObiektTopograficzny') → [OT\_CharakterystykaDrogi](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi 'DiGi\.BDOT10k\.Classes\.OT\_CharakterystykaDrogi') → OT\_SKDR\_L
+### Constructors
+
+<a name='DiGi.BDOT10k.Classes.OT_SKDR_L.OT_SKDR_L()'></a>
+
+## OT\_SKDR\_L\(\) Constructor
+
+Initializes a new instance of the [OT\_SKDR\_L](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_SKDR_L 'DiGi\.BDOT10k\.Classes\.OT\_SKDR\_L') class\.
+
+```csharp
+public OT_SKDR_L();
+```
+
+<a name='DiGi.BDOT10k.Classes.OT_SKJZ_L'></a>
+
+## OT\_SKJZ\_L Class
+
+Carriageway \(`jezdnia`\) of the BDOT10k standard: the axis of a single carriageway segment\.
+
+Besides the road attributes of [OT\_CharakterystykaDrogi](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi 'DiGi\.BDOT10k\.Classes\.OT\_CharakterystykaDrogi'), a carriageway carries the identity of the street it belongs to, from the TERYT register.
+
+```csharp
+public class OT_SKJZ_L : DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi
+```
+
+Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System\.Object') → [DiGi\.GML\.Classes\.AbstractGML](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.abstractgml 'DiGi\.GML\.Classes\.AbstractGML') → [DiGi\.GML\.Classes\.GML](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.gml 'DiGi\.GML\.Classes\.GML') → [OT\_ObiektTopograficzny](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_ObiektTopograficzny 'DiGi\.BDOT10k\.Classes\.OT\_ObiektTopograficzny') → [OT\_CharakterystykaDrogi](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_CharakterystykaDrogi 'DiGi\.BDOT10k\.Classes\.OT\_CharakterystykaDrogi') → OT\_SKJZ\_L
+### Constructors
+
+<a name='DiGi.BDOT10k.Classes.OT_SKJZ_L.OT_SKJZ_L()'></a>
+
+## OT\_SKJZ\_L\(\) Constructor
+
+Initializes a new instance of the [OT\_SKJZ\_L](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_SKJZ_L 'DiGi\.BDOT10k\.Classes\.OT\_SKJZ\_L') class\.
+
+```csharp
+public OT_SKJZ_L();
+```
+### Properties
+
+<a name='DiGi.BDOT10k.Classes.OT_SKJZ_L.cechaGeometrii'></a>
+
+## OT\_SKJZ\_L\.cechaGeometrii Property
+
+Gets or sets the kind of geometric representation\.
+
+Nullable although the UML gives it multiplicity 1: in the Geoportal 2025.07 data most carriageways omit it, and a default would mislabel them.
+
+```csharp
+public System.Nullable<DiGi.BDOT10k.Enums.OT_RodzajRepGeom> cechaGeometrii { get; set; }
+```
+
+#### Property Value
+[System\.Nullable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')[OT\_RodzajRepGeom](DiGi.BDOT10k.Enums.md#DiGi.BDOT10k.Enums.OT_RodzajRepGeom 'DiGi\.BDOT10k\.Enums\.OT\_RodzajRepGeom')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKJZ_L.identyfikatorSIMC'></a>
+
+## OT\_SKJZ\_L\.identyfikatorSIMC Property
+
+Gets or sets the TERYT SIMC identifier of the locality the street lies in\.
+
+```csharp
+public string? identyfikatorSIMC { get; set; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKJZ_L.identyfikatorULIC'></a>
+
+## OT\_SKJZ\_L\.identyfikatorULIC Property
+
+Gets or sets the TERYT ULIC street identifier\.
+
+```csharp
+public string? identyfikatorULIC { get; set; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKJZ_L.ulicaCecha'></a>
+
+## OT\_SKJZ\_L\.ulicaCecha Property
+
+Gets or sets the street feature from TERYT, e\.g\. `ul.` or `pl.`\.
+
+```csharp
+public string? ulicaCecha { get; set; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKJZ_L.ulicaNazwa1'></a>
+
+## OT\_SKJZ\_L\.ulicaNazwa1 Property
+
+Gets or sets the first part of the street name from TERYT\.
+
+```csharp
+public string? ulicaNazwa1 { get; set; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKJZ_L.ulicaNazwa2'></a>
+
+## OT\_SKJZ\_L\.ulicaNazwa2 Property
+
+Gets or sets the second part of the street name from TERYT\.
+
+```csharp
+public string? ulicaNazwa2 { get; set; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L'></a>
+
+## OT\_SKRP\_L Class
+
+Pedestrian or cycle route \(`ciąg ruchu pieszego lub rowerowego`\) of the BDOT10k standard: alleys, promenades, footpaths and cycle paths\.
+
+Derives directly from [OT\_ObiektTopograficzny](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_ObiektTopograficzny 'DiGi\.BDOT10k\.Classes\.OT\_ObiektTopograficzny'), as in Annex 2 to Dz.U. 2021 poz. 1412.
+
+```csharp
+public class OT_SKRP_L : DiGi.BDOT10k.Classes.OT_ObiektTopograficzny, DiGi.BDOT10k.Interfaces.IOT_LiniowyObiektGeometryczny, DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny<DiGi.GML.Classes.AbstractCurve>, DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny, DiGi.GML.Interfaces.IAbstractGML, DiGi.GML.Interfaces.IFeatureMember
+```
+
+Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system.object 'System\.Object') → [DiGi\.GML\.Classes\.AbstractGML](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.abstractgml 'DiGi\.GML\.Classes\.AbstractGML') → [DiGi\.GML\.Classes\.GML](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.gml 'DiGi\.GML\.Classes\.GML') → [OT\_ObiektTopograficzny](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_ObiektTopograficzny 'DiGi\.BDOT10k\.Classes\.OT\_ObiektTopograficzny') → OT\_SKRP\_L
+
+Implements [IOT\_LiniowyObiektGeometryczny](DiGi.BDOT10k.Interfaces.md#DiGi.BDOT10k.Interfaces.IOT_LiniowyObiektGeometryczny 'DiGi\.BDOT10k\.Interfaces\.IOT\_LiniowyObiektGeometryczny'), [DiGi\.BDOT10k\.Interfaces\.IOT\_ObiektGeometryczny&lt;](DiGi.BDOT10k.Interfaces.md#DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny_T_ 'DiGi\.BDOT10k\.Interfaces\.IOT\_ObiektGeometryczny\<T\>')[DiGi\.GML\.Classes\.AbstractCurve](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.abstractcurve 'DiGi\.GML\.Classes\.AbstractCurve')[&gt;](DiGi.BDOT10k.Interfaces.md#DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny_T_ 'DiGi\.BDOT10k\.Interfaces\.IOT\_ObiektGeometryczny\<T\>'), [IOT\_ObiektGeometryczny](DiGi.BDOT10k.Interfaces.md#DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny 'DiGi\.BDOT10k\.Interfaces\.IOT\_ObiektGeometryczny'), [DiGi\.GML\.Interfaces\.IAbstractGML](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.interfaces.iabstractgml 'DiGi\.GML\.Interfaces\.IAbstractGML'), [DiGi\.GML\.Interfaces\.IFeatureMember](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.interfaces.ifeaturemember 'DiGi\.GML\.Interfaces\.IFeatureMember')
+### Constructors
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L.OT_SKRP_L()'></a>
+
+## OT\_SKRP\_L\(\) Constructor
+
+Initializes a new instance of the [OT\_SKRP\_L](DiGi.BDOT10k.Classes.md#DiGi.BDOT10k.Classes.OT_SKRP_L 'DiGi\.BDOT10k\.Classes\.OT\_SKRP\_L') class\.
+
+```csharp
+public OT_SKRP_L();
+```
+### Properties
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L.geometria'></a>
+
+## OT\_SKRP\_L\.geometria Property
+
+Gets or sets the linear geometry of the object\.
+
+```csharp
+public DiGi.GML.Classes.AbstractCurve geometria { get; set; }
+```
+
+Implements [geometria](DiGi.BDOT10k.Interfaces.md#DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny_T_.geometria 'DiGi\.BDOT10k\.Interfaces\.IOT\_ObiektGeometryczny\<T\>\.geometria')
+
+#### Property Value
+[DiGi\.GML\.Classes\.AbstractCurve](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.abstractcurve 'DiGi\.GML\.Classes\.AbstractCurve')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L.identyfikatorSIMC'></a>
+
+## OT\_SKRP\_L\.identyfikatorSIMC Property
+
+Gets or sets the TERYT SIMC identifier of the locality\.
+
+```csharp
+public string? identyfikatorSIMC { get; set; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L.identyfikatorULIC'></a>
+
+## OT\_SKRP\_L\.identyfikatorULIC Property
+
+Gets or sets the TERYT ULIC street identifier\.
+
+```csharp
+public string? identyfikatorULIC { get; set; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L.materialNawierzchni'></a>
+
+## OT\_SKRP\_L\.materialNawierzchni Property
+
+Gets or sets the surface material\.
+
+```csharp
+public System.Nullable<DiGi.BDOT10k.Enums.OT_MaterialNawierzchni> materialNawierzchni { get; set; }
+```
+
+#### Property Value
+[System\.Nullable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')[OT\_MaterialNawierzchni](DiGi.BDOT10k.Enums.md#DiGi.BDOT10k.Enums.OT_MaterialNawierzchni 'DiGi\.BDOT10k\.Enums\.OT\_MaterialNawierzchni')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L.nazwa'></a>
+
+## OT\_SKRP\_L\.nazwa Property
+
+Gets or sets the proper name of the route\.
+
+```csharp
+public string? nazwa { get; set; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L.polozenie'></a>
+
+## OT\_SKRP\_L\.polozenie Property
+
+Gets or sets the position of the route relative to the ground surface\.
+
+```csharp
+public System.Nullable<DiGi.BDOT10k.Enums.OT_PolozenieObiektuSieciTransportowej> polozenie { get; set; }
+```
+
+#### Property Value
+[System\.Nullable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')[OT\_PolozenieObiektuSieciTransportowej](DiGi.BDOT10k.Enums.md#DiGi.BDOT10k.Enums.OT_PolozenieObiektuSieciTransportowej 'DiGi\.BDOT10k\.Enums\.OT\_PolozenieObiektuSieciTransportowej')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L.rodzaj'></a>
+
+## OT\_SKRP\_L\.rodzaj Property
+
+Gets or sets the kind of route\.
+
+```csharp
+public System.Nullable<DiGi.BDOT10k.Enums.OT_RodzajCiaguRuchuPieszego> rodzaj { get; set; }
+```
+
+#### Property Value
+[System\.Nullable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')[OT\_RodzajCiaguRuchuPieszego](DiGi.BDOT10k.Enums.md#DiGi.BDOT10k.Enums.OT_RodzajCiaguRuchuPieszego 'DiGi\.BDOT10k\.Enums\.OT\_RodzajCiaguRuchuPieszego')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L.szerokosc'></a>
+
+## OT\_SKRP\_L\.szerokosc Property
+
+Gets or sets the width in metres\.
+
+```csharp
+public System.Nullable<double> szerokosc { get; set; }
+```
+
+#### Property Value
+[System\.Nullable&lt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')[System\.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double 'System\.Double')[&gt;](https://learn.microsoft.com/en-us/dotnet/api/system.nullable-1 'System\.Nullable\`1')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L.ulicaCecha'></a>
+
+## OT\_SKRP\_L\.ulicaCecha Property
+
+Gets or sets the street feature from TERYT, e\.g\. `ul.`\.
+
+```csharp
+public string? ulicaCecha { get; set; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L.ulicaNazwa1'></a>
+
+## OT\_SKRP\_L\.ulicaNazwa1 Property
+
+Gets or sets the first part of the street name from TERYT\.
+
+```csharp
+public string? ulicaNazwa1 { get; set; }
+```
+
+#### Property Value
+[System\.String](https://learn.microsoft.com/en-us/dotnet/api/system.string 'System\.String')
+
+<a name='DiGi.BDOT10k.Classes.OT_SKRP_L.ulicaNazwa2'></a>
+
+## OT\_SKRP\_L\.ulicaNazwa2 Property
+
+Gets or sets the second part of the street name from TERYT\.
+
+```csharp
+public string? ulicaNazwa2 { get; set; }
 ```
 
 #### Property Value

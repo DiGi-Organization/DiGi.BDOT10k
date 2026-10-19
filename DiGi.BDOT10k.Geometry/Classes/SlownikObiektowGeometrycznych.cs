@@ -81,8 +81,6 @@ namespace DiGi.BDOT10k.Geometry.Classes
 
                     result.Add(t);
                 }
-
-                return result;
             }
 
             return result;

@@ -45,7 +45,7 @@ namespace DiGi.BDOT10k.Geometry
                 return DiGi.Geometry.Planar.Create.PolygonalFace2D(externalPolygon2D, internalPolygon2Ds);
             }
 
-            throw new System.NotImplementedException();
+            return null;
         }
     }
 }

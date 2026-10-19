@@ -18,7 +18,9 @@ Inheritance [System\.Object](https://learn.microsoft.com/en-us/dotnet/api/system
 
 ## Convert\.ToDiGi\(this IOT\_ObiektGeometryczny\) Method
 
-Konwertuje obiekt geometryczny z formatu transferowego \(IOT\) na wewnętrzny format DiGi\.
+Converts a BDOT10k object of the transfer format \(IOT\) to its DiGi geometric object\.
+
+An unsupported class returns [null](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null 'https://docs\.microsoft\.com/en\-us/dotnet/csharp/language\-reference/keywords/null') instead of throwing. [Load\(this SlownikObiektowGeometrycznych, FeatureCollection\)](DiGi.BDOT10k.Geometry.md#DiGi.BDOT10k.Geometry.Modify.Load(thisDiGi.BDOT10k.Geometry.Classes.SlownikObiektowGeometrycznych,DiGi.GML.Classes.FeatureCollection) 'DiGi\.BDOT10k\.Geometry\.Modify\.Load\(this DiGi\.BDOT10k\.Geometry\.Classes\.SlownikObiektowGeometrycznych, DiGi\.GML\.Classes\.FeatureCollection\)') calls this for every feature member, so a single class without a converter would otherwise abort the load of a whole file.
 
 ```csharp
 public static DiGi.BDOT10k.Geometry.Interfaces.IObiektGeometryczny? ToDiGi(this DiGi.BDOT10k.Interfaces.IOT_ObiektGeometryczny? oT_ObiektGeometryczny);
@@ -29,16 +31,34 @@ public static DiGi.BDOT10k.Geometry.Interfaces.IObiektGeometryczny? ToDiGi(this 
 
 `oT_ObiektGeometryczny` [DiGi\.BDOT10k\.Interfaces\.IOT\_ObiektGeometryczny](https://learn.microsoft.com/en-us/dotnet/api/digi.bdot10k.interfaces.iot_obiektgeometryczny 'DiGi\.BDOT10k\.Interfaces\.IOT\_ObiektGeometryczny')
 
-Obiekt geometryczny w formacie transferowym do konwersji\.
+The BDOT10k object to convert\.
 
 #### Returns
 [IObiektGeometryczny](DiGi.BDOT10k.Geometry.Interfaces.md#DiGi.BDOT10k.Geometry.Interfaces.IObiektGeometryczny 'DiGi\.BDOT10k\.Geometry\.Interfaces\.IObiektGeometryczny')  
-Odpowiednik obiektu w formacie DiGi lub [null](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null 'https://docs\.microsoft\.com/en\-us/dotnet/csharp/language\-reference/keywords/null'), jeśli wejściowy obiekt jest nullem\.
+The DiGi geometric object; or [null](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null 'https://docs\.microsoft\.com/en\-us/dotnet/csharp/language\-reference/keywords/null') when the input is [null](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null 'https://docs\.microsoft\.com/en\-us/dotnet/csharp/language\-reference/keywords/null') or its class is not supported\.
 
-#### Exceptions
+<a name='DiGi.BDOT10k.Geometry.Convert.ToDiGi(thisDiGi.GML.Classes.AbstractCurve)'></a>
 
-[System\.NotImplementedException](https://learn.microsoft.com/en-us/dotnet/api/system.notimplementedexception 'System\.NotImplementedException')  
-Rzucane, gdy typ przekazanego obiektu nie jest obsługiwany przez konwerter\.
+## Convert\.ToDiGi\(this AbstractCurve\) Method
+
+Converts a GML curve to a [DiGi\.Geometry\.Planar\.Classes\.Polyline2D](https://learn.microsoft.com/en-us/dotnet/api/digi.geometry.planar.classes.polyline2d 'DiGi\.Geometry\.Planar\.Classes\.Polyline2D')\.
+
+BDOT10k encodes every linear geometry as a [DiGi\.GML\.Classes\.Curve](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.curve 'DiGi\.GML\.Classes\.Curve') of [DiGi\.GML\.Classes\.LineStringSegment](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.linestringsegment 'DiGi\.GML\.Classes\.LineStringSegment')s with 2D coordinates. Segments are concatenated in order. The point a segment shares with the previous one, and any other point repeating its predecessor, is removed by [DiGi\.Geometry\.Planar\.Create\.Polyline2D\(System\.Collections\.Generic\.IEnumerable\{DiGi\.Geometry\.Planar\.Classes\.Point2D\},System\.Double\)](https://learn.microsoft.com/en-us/dotnet/api/digi.geometry.planar.create.polyline2d#digi-geometry-planar-create-polyline2d(system-collections-generic-ienumerable{digi-geometry-planar-classes-point2d}-system-double) 'DiGi\.Geometry\.Planar\.Create\.Polyline2D\(System\.Collections\.Generic\.IEnumerable\{DiGi\.Geometry\.Planar\.Classes\.Point2D\},System\.Double\)'), which also rejects a result with fewer than two distinct points.
+
+```csharp
+public static DiGi.Geometry.Planar.Classes.Polyline2D? ToDiGi(this DiGi.GML.Classes.AbstractCurve? abstractCurve);
+```
+#### Parameters
+
+<a name='DiGi.BDOT10k.Geometry.Convert.ToDiGi(thisDiGi.GML.Classes.AbstractCurve).abstractCurve'></a>
+
+`abstractCurve` [DiGi\.GML\.Classes\.AbstractCurve](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.abstractcurve 'DiGi\.GML\.Classes\.AbstractCurve')
+
+The GML curve to convert\.
+
+#### Returns
+[DiGi\.Geometry\.Planar\.Classes\.Polyline2D](https://learn.microsoft.com/en-us/dotnet/api/digi.geometry.planar.classes.polyline2d 'DiGi\.Geometry\.Planar\.Classes\.Polyline2D')  
+The [DiGi\.Geometry\.Planar\.Classes\.Polyline2D](https://learn.microsoft.com/en-us/dotnet/api/digi.geometry.planar.classes.polyline2d 'DiGi\.Geometry\.Planar\.Classes\.Polyline2D'); or [null](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null 'https://docs\.microsoft\.com/en\-us/dotnet/csharp/language\-reference/keywords/null') when the input is [null](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null 'https://docs\.microsoft\.com/en\-us/dotnet/csharp/language\-reference/keywords/null'), is not a [DiGi\.GML\.Classes\.Curve](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.curve 'DiGi\.GML\.Classes\.Curve'), holds a segment that is not a [DiGi\.GML\.Classes\.LineStringSegment](https://learn.microsoft.com/en-us/dotnet/api/digi.gml.classes.linestringsegment 'DiGi\.GML\.Classes\.LineStringSegment'), holds an empty or odd\-length coordinate list, or collapses to fewer than two distinct points\.
 
 <a name='DiGi.BDOT10k.Geometry.Convert.ToDiGi(thisDiGi.GML.Classes.LinearRing)'></a>
 
