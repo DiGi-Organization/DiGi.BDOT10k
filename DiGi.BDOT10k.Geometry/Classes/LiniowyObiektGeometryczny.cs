@@ -19,7 +19,7 @@ namespace DiGi.BDOT10k.Geometry.Classes
         protected T? oT_LiniowyObiektGeometryczny;
 
         private double length = double.NaN;
-        private BoundingBox2D? boundingBox2D = null;
+        private BoundingBox2D? boundingBox2D;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="LiniowyObiektGeometryczny{T}"/> class.

@@ -14,42 +14,42 @@ namespace DiGi.BDOT10k.Classes
         /// <summary>
         /// Gets or sets the management category of the road.
         /// </summary>
-        public OT_KatZarzadzaniaDrogi? kategoriaZarzadzania { get; set; } = null;
+        public OT_KatZarzadzaniaDrogi? kategoriaZarzadzania { get; set; }
 
         /// <summary>
         /// Gets or sets the technical class of the road.
         /// </summary>
-        public OT_KlasaDrogi? klasaDrogi { get; set; } = null;
+        public OT_KlasaDrogi? klasaDrogi { get; set; }
 
         /// <summary>
         /// Gets or sets the surface material.
         /// </summary>
-        public OT_MaterialNawierzchni? materialNawierzchni { get; set; } = null;
+        public OT_MaterialNawierzchni? materialNawierzchni { get; set; }
 
         /// <summary>
         /// Gets or sets the proper name of the road, which is not a street name.
         /// </summary>
-        public string? nazwaDrogi { get; set; } = null;
+        public string? nazwaDrogi { get; set; }
 
         /// <summary>
         /// Gets or sets the number of carriageways of the road.
         /// </summary>
-        public int? liczbaJezdniDrogi { get; set; } = null;
+        public int? liczbaJezdniDrogi { get; set; }
 
         /// <summary>
         /// Gets or sets the position of the road relative to the ground surface.
         /// </summary>
-        public OT_PolozenieObiektuSieciTransportowej? polozenie { get; set; } = null;
+        public OT_PolozenieObiektuSieciTransportowej? polozenie { get; set; }
 
         /// <summary>
         /// Gets or sets the surface width in metres.
         /// </summary>
-        public double? szerokoscNawierzchni { get; set; } = null;
+        public double? szerokoscNawierzchni { get; set; }
 
         /// <summary>
         /// Gets or sets the road numbers. A road segment can carry several, e.g. a European and a national number.
         /// </summary>
-        public List<string>? numerDrogi { get; set; } = null;
+        public List<string>? numerDrogi { get; set; }
 
         /// <summary>
         /// Gets or sets the linear geometry of the object.

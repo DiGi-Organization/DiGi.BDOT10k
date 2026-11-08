@@ -13,52 +13,52 @@ namespace DiGi.BDOT10k.Classes
         /// <summary>
         /// Gets or sets the kind of route.
         /// </summary>
-        public OT_RodzajCiaguRuchuPieszego? rodzaj { get; set; } = null;
+        public OT_RodzajCiaguRuchuPieszego? rodzaj { get; set; }
 
         /// <summary>
         /// Gets or sets the surface material.
         /// </summary>
-        public OT_MaterialNawierzchni? materialNawierzchni { get; set; } = null;
+        public OT_MaterialNawierzchni? materialNawierzchni { get; set; }
 
         /// <summary>
         /// Gets or sets the position of the route relative to the ground surface.
         /// </summary>
-        public OT_PolozenieObiektuSieciTransportowej? polozenie { get; set; } = null;
+        public OT_PolozenieObiektuSieciTransportowej? polozenie { get; set; }
 
         /// <summary>
         /// Gets or sets the TERYT SIMC identifier of the locality.
         /// </summary>
-        public string? identyfikatorSIMC { get; set; } = null;
+        public string? identyfikatorSIMC { get; set; }
 
         /// <summary>
         /// Gets or sets the TERYT ULIC street identifier.
         /// </summary>
-        public string? identyfikatorULIC { get; set; } = null;
+        public string? identyfikatorULIC { get; set; }
 
         /// <summary>
         /// Gets or sets the proper name of the route.
         /// </summary>
-        public string? nazwa { get; set; } = null;
+        public string? nazwa { get; set; }
 
         /// <summary>
         /// Gets or sets the width in metres.
         /// </summary>
-        public double? szerokosc { get; set; } = null;
+        public double? szerokosc { get; set; }
 
         /// <summary>
         /// Gets or sets the street feature from TERYT, e.g. <c>ul.</c>.
         /// </summary>
-        public string? ulicaCecha { get; set; } = null;
+        public string? ulicaCecha { get; set; }
 
         /// <summary>
         /// Gets or sets the first part of the street name from TERYT.
         /// </summary>
-        public string? ulicaNazwa1 { get; set; } = null;
+        public string? ulicaNazwa1 { get; set; }
 
         /// <summary>
         /// Gets or sets the second part of the street name from TERYT.
         /// </summary>
-        public string? ulicaNazwa2 { get; set; } = null;
+        public string? ulicaNazwa2 { get; set; }
 
         /// <summary>
         /// Gets or sets the linear geometry of the object.

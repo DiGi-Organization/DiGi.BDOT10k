@@ -15,8 +15,8 @@ namespace DiGi.BDOT10k.Geometry.Classes
         protected T? oT_PowierzchniowyObiektGeometryczny;
 
         private double area = double.NaN;
-        private BoundingBox2D? boundingBox2D = null;
-        private Point2D? internalPoint2D = null;
+        private BoundingBox2D? boundingBox2D;
+        private Point2D? internalPoint2D;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PowierzchniowyObiektGeometryczny{T}"/> class.

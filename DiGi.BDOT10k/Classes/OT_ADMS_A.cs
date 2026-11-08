@@ -12,7 +12,7 @@ namespace DiGi.BDOT10k.Classes
         /// <summary>
         /// Identyfikator SIMC (System Identyfikacji Miejscowości i Członów).
         /// </summary>
-        public string? identyfikatorSIMC { get; set; } = null;
+        public string? identyfikatorSIMC { get; set; }
 
         /// <summary>
         /// Identyfikator TERC.
@@ -27,7 +27,7 @@ namespace DiGi.BDOT10k.Classes
         /// <summary>
         /// Liczba mieszkańców.
         /// </summary>
-        public uint? liczbaMieszkancow { get; set; } = null;
+        public uint? liczbaMieszkancow { get; set; }
 
         /// <summary>
         /// Identyfikator PRNG.

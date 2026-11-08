@@ -22,7 +22,7 @@ namespace DiGi.BDOT10k.Classes
         /// <summary>
         /// Identyfikator TERYT jednostki nadrzędnej.
         /// </summary>
-        public string? idTERYTjednostkiNadrzednej { get; set; } = null;
+        public string? idTERYTjednostkiNadrzednej { get; set; }
 
         /// <summary>
         /// Rodzaj jednostki administracyjnej.

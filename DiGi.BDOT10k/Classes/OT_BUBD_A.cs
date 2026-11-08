@@ -13,17 +13,17 @@ namespace DiGi.BDOT10k.Classes
         /// <summary>
         /// Kod klasyfikacji obiektów budowlanych (KST).
         /// </summary>
-        public string? kodKst { get; set; } = null;
+        public string? kodKst { get; set; }
 
         /// <summary>
         /// Ogólna funkcja budynku.
         /// </summary>
-        public OT_FunOgolnaBudynku? funkcjaOgolnaBudynku { get; set; } = null;
+        public OT_FunOgolnaBudynku? funkcjaOgolnaBudynku { get; set; }
 
         /// <summary>
         /// Lista szczegółowych funkcji budynku.
         /// </summary>
-        public List<OT_FunSzczegolowaBudynku>? funkcjaSzczegolowaBudynku { get; set; } = null;
+        public List<OT_FunSzczegolowaBudynku>? funkcjaSzczegolowaBudynku { get; set; }
 
         /// <summary>
         /// Przeważająca funkcja budynku.
@@ -33,17 +33,17 @@ namespace DiGi.BDOT10k.Classes
         /// <summary>
         /// Liczba kondygnacji w budynku.
         /// </summary>
-        public ushort? liczbaKondygnacji { get; set; } = null;
+        public ushort? liczbaKondygnacji { get; set; }
 
         /// <summary>
         /// Nazwa budynku.
         /// </summary>
-        public string? nazwa { get; set; } = null;
+        public string? nazwa { get; set; }
 
         /// <summary>
         /// Lista identyfikatorów z Ewidencji Gruntów i Budynków (EGiB).
         /// </summary>
-        public List<string>? identyfikatorEGiB { get; set; } = null;
+        public List<string>? identyfikatorEGiB { get; set; }
 
         /// <summary>
         /// Geometria powierzchniowa obiektu.

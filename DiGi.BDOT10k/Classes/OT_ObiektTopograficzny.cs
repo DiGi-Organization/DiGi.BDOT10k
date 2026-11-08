@@ -31,7 +31,7 @@ namespace DiGi.BDOT10k.Classes
         /// <summary>
         /// Pobiera lub ustawia datę zakończenia obowiązywania wersji obiektu.
         /// </summary>
-        public DateTime? koniecWersjiObiektu { get; set; } = null;
+        public DateTime? koniecWersjiObiektu { get; set; }
 
         /// <summary>
         /// Pobiera lub ustawia oznaczenie wprowadzonej zmiany w obiekcie.
@@ -51,27 +51,27 @@ namespace DiGi.BDOT10k.Classes
         /// <summary>
         /// Pobiera lub ustawia uwagi dotyczące obiektu.
         /// </summary>
-        public string? uwagi { get; set; } = null;
+        public string? uwagi { get; set; }
 
         /// <summary>
         /// Pobiera lub ustawia dodatkowe informacje o obiekcie.
         /// </summary>
-        public string? informacjaDodatkowa { get; set; } = null;
+        public string? informacjaDodatkowa { get; set; }
 
         /// <summary>
         /// Pobiera lub ustawia kod kartograficzny dla mapy w skali 1:10 000.
         /// </summary>
-        public string? kodKarto10k { get; set; } = null;
+        public string? kodKarto10k { get; set; }
 
         /// <summary>
         /// Pobiera lub ustawia kod kartograficzny dla mapy w skali 1:250 000.
         /// </summary>
-        public string? kodKarto250k { get; set; } = null;
+        public string? kodKarto250k { get; set; }
 
         /// <summary>
         /// Pobiera lub ustawia skrót kartograficzny obiektu.
         /// </summary>
-        public string? skrotKartograficzny { get; set; } = null;
+        public string? skrotKartograficzny { get; set; }
 
         /// <summary>
         /// Inicjalizuje nową instancję klasy <see cref="OT_ObiektTopograficzny"/>.
